@@ -283,6 +283,34 @@ main {
         margin: 0;
     }
     
+    /*seccion 3 movil*/
+
+    .section3 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    
+    }
+
+    .section3 img {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .section3img img {
+        width: 100%; /* Haz que la imagen se ajuste al ancho del contenedor */
+    height: 100%; /* Haz que la imagen se ajuste a la altura del contenedor */
+    object-fit: cover;
+    }
+
+
+    .section3img::before {
+        content: ""; 
+        display: none;
+        }
+    
     
 
 }
