@@ -227,7 +227,7 @@ main {
 
 .section3img img {
     width: 100%;
-    display: block; /* Elimina espacios blancos alrededor de la imagen */
+    display: block; 
 }
 
 @media screen and (max-width: 700px) {
@@ -288,8 +288,8 @@ main {
     .section3 {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         position: relative;
-    
     }
 
     .section3 img {
@@ -301,8 +301,9 @@ main {
 
     .section3img img {
         width: 100%; /* Haz que la imagen se ajuste al ancho del contenedor */
-    height: 100%; /* Haz que la imagen se ajuste a la altura del contenedor */
-    object-fit: cover;
+        height: 100%; /* Haz que la imagen se ajuste a la altura del contenedor */
+        object-fit: cover;
+        
     }
 
 
@@ -310,6 +311,12 @@ main {
         content: ""; 
         display: none;
         }
+
+    .section3 h2, .section3 p {
+        margin: auto;
+        text-align: center;
+        width: 80%;
+    }
     
     
 
