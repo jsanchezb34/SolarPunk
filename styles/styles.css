@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+:root {
+    --main-color : #0D0D0D;
+    --primary-color:#ffffff ;
+    --secondary-color:#252525 ;
+    --accent1-color: #F3CF06 ;
+    --accent2-color: #E0D114;
+    
+    --heading-font: 'oswald';
+    --paragraph-font: 'oswald';
+    
+    --nav-background-color:#588157;
+    --nav-link-color:#344E41;
+    --nav-hover-link-color:var(--accent1-color);
+    --nav-hover-background-color:#A3B18A;
+    }
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family:var(--heading-font);
+    color: var(--primary-color);
+}
+
+
+body {
+    margin: 0;
+}
+
+/* Encabezado*/
+
+header {
+    position:absolute;
+    width: 100%;
+    display: grid;
+    z-index: 100;
+}
+
+.navbar {
+    background: linear-gradient(to top, rgba(13, 13, 13, 0.0), rgba(13, 13, 13, 1));
+    height: 150px;
+    display: grid;
+    padding-left: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.navbar h2 {
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.navbar nav a{
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+}
+
+.navbar nav a:hover {
+    transform: scale(1.5); /* Aumenta el tamaño al 110% al hacer hover */
+    transition: transform .5s ease; 
+}
+
+/*Body*/
+
+main {
+    width: 100%;
+}
+
+
+.section1 {
+    position: relative;
+
+
+}
+.section1 img{
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.intro {
+    width: 100%;
+    position: absolute; /* Posiciona el contenido sobre la imagen */
+    top: 50%; /* Ajusta la posición vertical (50% desde la parte superior) */
+    left: 50%; /* Ajusta la posición horizontal (50% desde la parte izquierda) */
+    transform: translate(-50%, -50%); /* Centra el contenido en ambos ejes */
+    color: white; /* Cambia el color del texto para mejor visibilidad */
+    text-align: center; /* Centra el texto */
+    /*background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para resaltar el texto */
+    padding: 1em; /* Añade espacio interno al contenido */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.intro h2 {
+    font-size: 13rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+
+.intro p {
+    padding: 5rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* section 2*/
+
+.section2 {
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative; /* Necesario para posicionar elementos dentro de la tarjeta */
+    width: 300rem; /* Ancho de cada tarjeta */
+    max-width: 500px;
+    height: 300rem; /* Alto de cada tarjeta */
+    max-height: 500px;
+    overflow: hidden; /* Asegura que nada se desborde */
+    color: white; /* Texto en blanco para resaltar sobre la imagen */
+    text-align: center; /* Centra el texto */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto */
+    /*efectos-animacion*/
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.4); /* Aumenta el tamaño al 110% al hacer hover */
+    transition: transform 1s ease; 
+}
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda la tarjeta */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+.cardtext{
+    position: absolute;
+    bottom: 0;
+    z-index: 1; /* Se aseguran de estar sobre la imagen */
+    background: linear-gradient(to top, rgba(13, 13, 13, 0.8), rgb(27, 20, 20, 0.0));
+}
+
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* seccion 3*/
+
+.section3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section3 h2 {
+    font-size: 2.5rem;
+}
+
+.section3 h2, .section3 p {
+    color: var(--main-color);
+    text-align: end;
+    padding: 1rem;
+    width: 80%;
+    margin-left: 5rem;
+}
+
+
+
+.section3img {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ajusta al tamaño del contenedor */
+    overflow: hidden;
+}
+
+.section3img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+.section3img::before {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width:40%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0)); /* Degradado encima */
+    pointer-events: none; /* Permite interactuar con la imagen debajo */
+    z-index: 1; /* Asegura que el degradado esté encima */
+}
+
+.section3img img {
+    width: 100%;
+    display: block; /* Elimina espacios blancos alrededor de la imagen */
+}
