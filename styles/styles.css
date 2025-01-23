@@ -250,9 +250,6 @@ main {
 
     }
     
-    .intro {
-    
-    }
     
     .intro h2 {
         font-size: 10vh;
@@ -265,6 +262,25 @@ main {
         color: var(--main-color);
         font-size:3vh;
     
+    }
+
+    /*seccion 2 movil*/
+
+    .section2 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        
+    }
+    
+    .card:hover {
+        transform: scale(1); 
+    }
+        
+
+    .section2 .card {
+        border-radius: 0px;
+        margin: 0;
     }
     
     
